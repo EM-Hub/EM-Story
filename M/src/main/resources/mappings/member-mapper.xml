@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 맵퍼파일 생성 후 반드시 sql-map-config.xml 파일에 mapper 등록해줘야 함 -->
+<mapper namespace="memberMapper">
+	<resultMap type="com.spring.biz.vo.MemberVO" id="member">
+		<result column="MEMBER_ID" 	property="memberId"/>
+		<result column="MEMBER_PASSWORD" 	property="memberPassword"/>
+		<result column="MEMBER_NAME" 	property="memberName"/>
+		<result column="MEMBER_BIRTHDAY" 	property="memberBirthday"/>
+		<result column="MEMBER_AGE" 	property="memberAge"/>
+		<result column="MEMBER_PHONE" 	property="memberPhone"/>
+		<result column="MEMBER_EMAIL" 	property="memberEmail"/>
+		<result column="MEMBER_GENDER" 	property="memberGender"/>
+	</resultMap>
+
+	<select id="loginMember" resultMap="member">
+	SELECT *
+	FROM MEMBER_INFO
+	WHERE MEMBER_ID = #{memberId}
+	AND MEMBER_PASSWORD = #{memberPassword}
+	</select>
+
+
+
+
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
