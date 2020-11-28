@@ -36,8 +36,13 @@ public class MemberController {
 		if(loginInfo == null){
 			login = 1;
 		}
-		
 		return login; 
+	}
+	//회원가입페이지
+	@RequestMapping(value = "/joinPage.do")
+	public String joinPage() {
+		
+		return "member/joinPage"; 
 	}
 }
 

@@ -60,6 +60,12 @@ input[type='button']{
 	border: none;
 	border-radius: 0.5em;
 	outline: none;
+	font-weight: bold;
+}
+input[type='button']:hover{
+	background: rgba(184, 75, 37);
+	color: white;
+	cursor: pointer;
 }
 a{
 	text-decoration: none;
@@ -77,7 +83,7 @@ a{
 			<div style="width: 100%;">
 				<div align="center" style="width:15%; height: 2em; font-size: 18px; font-weight:bold; color: white; display: inline-block;">ID</div>
 				<div style="width: 85%; height:2em; display: inline-block; float: right;">
-					<input type="text" id="loginId" placeholder="아이디를 입력하세요.">
+					<input type="text" id="loginId" placeholder="아이디를 입력하세요." name="id">
 				</div>
 			</div>
 			<div style="width: 100%;">
@@ -87,17 +93,17 @@ a{
 				</div>
 			</div>
 			<div style="width: 100%; margin-top: 10px; padding-left: 55px; font-size: 14px; color: white;" align="left">
-					<input type="checkbox">기억하기 
+					<input type="checkbox" id="idSaveCheck">기억하기 
 			</div>
 			<div style="margin-top: 20px;">
 				<input type="button" value="로그인" id="loginBtn">
 			</div>
 			<div style="margin-top: 20px; font-size: 14px; color: white;">
-				<a href="#">회원가입</a>&nbsp;&nbsp;&nbsp;<a href="#">아이디/비밀번호찾기</a>
+				<a href="joinPage.do">회원가입</a>&nbsp;&nbsp;&nbsp;<a href="#">아이디/비밀번호찾기</a>
 			</div>
 			</div>
 		</div>
 </div>
-<script src="resources/js/login.js?ver=1"></script>   
+<script src="resources/js/login.js?ver=4"></script>   
 </body>
 </html>
